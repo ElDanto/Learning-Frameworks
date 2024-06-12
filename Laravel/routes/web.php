@@ -7,4 +7,9 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-    Route::get( '/', [IndexController::class]);
+//    Route::get( '/', [IndexController::class]);
+
+Route::get('/test/{id}', [\App\Http\Controllers\TestController::class, "show"])
+    ->name("test")
+    ->where("id", "[0-9]+");
+;
