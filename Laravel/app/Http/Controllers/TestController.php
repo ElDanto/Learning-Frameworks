@@ -8,7 +8,7 @@ class TestController extends Controller
 {
     public function show(Request $request, $number)
     {
-        dd($number);
+        echo $number;
     }
 }
 
